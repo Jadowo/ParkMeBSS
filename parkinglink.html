@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+	<head>
+		<title> ParkMe </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>
+		<style>
+			body{background-image: url("https://www.hdwallback.net/wp-content/uploads/2018/01/Beautiful-Landscape-High-Resolution-4K-Wallpaper.jpg");background-repeat: no-repeat;background-size: cover;}
+			a:link{color:white;}
+			a:visited{color:white;}
+			a:hover{color:yellow;}
+			.linkstyle{font-family:Roboto,sans-serif;font-weight:100;text-decoration: none;}
+			#linkbackground{background-color:black;text-align: left;margin-left:-10px;margin-right:-8px;margin-top:-10px;padding-left:135px;padding-top:30px;padding-top:30px;padding-bottom:30px;}
+			img{width:42px;height:42px;float:left;margin-right:2%;margin-top:13%;}
+			#refbut{margin-left:45.5%;margin-bottom:100px;margin-top:50px;width:150px;height:30px;border-radius:5px;}
+			.box{background: radial-gradient(farthest-side at 50% 100%,white -50%,rgba(96,96,96));color:black;border-radius: 5px;padding: 20px;font-size: 150%;text-align:center;float:left;width:150px;height:200px;margin-right:5%;}
+			#box2{margin-left:29.5%;}
+			.dot{height:50px;width:50px;border-radius: 50%;justify-content: center;position:relative;top:30%;left:35%;}
+			.socialimg{margin-top:20%;}
+		</style>
+	</head>
+	<body onmouseover="refresh()">
+		<div id="linkbackground">
+		<a class="linkstyle" href="https://parkmealpha.weebly.com/"style="font-size:110%;">home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="https://parkmealpha.weebly.com/team.html"style="font-size:110%;">team</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="https://parkmealpha.weebly.com/contact.html"style="font-size:110%;">contact</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="https://parkmealpha.weebly.com/stores.html"style="font-size:110%;">stores</a>
+		</div>
+		<br><br>
+		<button type="button" onclick="refresh()" id="refbut">Refresh</button>
+		<div id="box2">
+			<div class="box">1 <div class="dot" id="cdot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">2 <div class="dot" id="cdot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">3 <div class="dot" id="cdot3"></div></div> 
+		</div>
+		<div id="social">
+		<a href="https://www.instagram.com/?hl=en"><img class="socialimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" style="margin-left: 43%;"border="0"></a>
+		<a href="https://www.facebook.com/"><img class="socialimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png"border="0" style="border-radius:12px"></a>
+		<a href="https://twitter.com/?lang=en"><img class="socialimg" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png"border="0"></a>
+		<a href="https://get.weebly.com/websites/cta/?c=mkt_w_chnl:semb_geo:US_prtnr:ggl_clickid:_kenshoo_clickid__trgtid:aud-347602276454:kwd-2842375176_camp:G-S-Website-Branded-AlphaHT-US_campid:257473334_ag:weebly_agid:15054213254_kw:weebly_mt:e_dvc:c_adtype:adfrmt:lptype:&gclid=EAIaIQobChMIjY2Vxe6M2gIVCF6GCh2a3QkAEAAYASAAEgKE_PD_BwE"><img class="socialimg" src="https://cdn.worldvectorlogo.com/logos/weebly.svg"border="0"></a>
+		<div>
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script>
+		var config = {
+			apiKey: "AIzaSyCMGyvShthPe3RRS1BDaEQCcCrvXZ2r4TM",
+			authDomain: "parkme-bf0e7.firebaseapp.com",
+			databaseURL: "https://parkme-bf0e7.firebaseio.com",
+			projectId: "parkme-bf0e7",
+			storageBucket: "parkme-bf0e7.appspot.com",
+			messagingSenderId: "668607317840"
+		};
+		firebase.initializeApp(config);
+		var cdot1=document.getElementById('cdot1');
+		var cdot2=document.getElementById('cdot2');
+		var cdot3=document.getElementById('cdot3');
+	
+		var dbRef1 = firebase.database().ref().child('modelparking').child("p1");
+		var dbRef2 = firebase.database().ref().child('modelparking').child('p2');
+		var dbRef3 = firebase.database().ref().child('modelparking').child('p3');
+	
+		function refresh(){
+			dbRef1.on('value', snap => cdot1.innerHTML = snap.val());
+			dbRef2.on('value', snap => cdot2.innerHTML = snap.val());
+			dbRef3.on('value', snap => cdot3.innerHTML = snap.val());
+			
+			if (cdot1.innerHTML == "1"){
+				document.getElementById('cdot1').style.backgroundColor = 'green';
+				document.getElementById('cdot1').style.color = "green";
+			}
+			else if(cdot1.innerHTML == "2"){
+				document.getElementById('cdot1').style.backgroundColor = "red";
+				document.getElementById('cdot1').style.color = "red";
+			}
+			if (cdot2.innerHTML == "1"){
+				document.getElementById('cdot2').style.backgroundColor = 'green';
+				document.getElementById('cdot2').style.color = "green";
+			}
+			else if(cdot2.innerHTML == "2"){
+				document.getElementById('cdot2').style.backgroundColor = "red";
+				document.getElementById('cdot2').style.color = "red";
+			}
+			if (cdot3.innerHTML == "1"){
+				document.getElementById('cdot3').style.backgroundColor = 'green';
+				document.getElementById('cdot3').style.color = "green";
+			}
+			else if(cdot3.innerHTML == "2"){
+				document.getElementById('cdot3').style.backgroundColor = "red";
+				document.getElementById('cdot3').style.color = "red";
+			}
+		}
+</script>
+	</body>
+</html>
