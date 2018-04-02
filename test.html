@@ -1,35 +1,34 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 	<head>
-	<meta charset="utf-8">
-		<title>Test</title>
-	<head>
-<body>
-
-<h1 id = "bigOne"><h1>
-
-
-
-
-
-
-	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-	<script>
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyCMGyvShthPe3RRS1BDaEQCcCrvXZ2r4TM",
-		authDomain: "parkme-bf0e7.firebaseapp.com",
-		databaseURL: "https://parkme-bf0e7.firebaseio.com",
-		projectId: "parkme-bf0e7",
-		storageBucket: "parkme-bf0e7.appspot.com",
-		messagingSenderId: "668607317840"
-	};
-	firebase.initializeApp(config);
-	
-		
-		var bigOne = document.getElementById("bigOne");
-		var dbRef = firebase.database().ref().child("text");
-		dbRef.on("value", snap => bigOne.innerText = snap.val());
-	</script>
-</body>
+		<title> ParkMe </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>
+		<style>
+			body{background-image: url("https://www.hdwallback.net/wp-content/uploads/2018/01/Beautiful-Landscape-High-Resolution-4K-Wallpaper.jpg");background-repeat: no-repeat;background-size: cover;}
+			a:link{color:white;}
+			a:visited{color:white;}
+			a:hover{color:yellow;}
+			.linkstyle{font-family:Roboto,sans-serif;font-weight:100;text-decoration:none;}
+			#linkbackground{background-color:black;text-align: left;margin-left:-10px;margin-right:-8px;margin-top:-10px;padding-left:135px;padding-top:30px;padding-top:30px;padding-bottom:30px;}
+			img{width:42px;height:42px;float:left;margin-right:2%;}
+			#social{margin-top:33%;}
+			<!--change social margin top depending on content-->
+		</style>
+	</head>
+	<body>
+		<div id="linkbackground">
+		<a class="linkstyle" href="parkinghome.html"style="font-size:110%;">home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="parkingteam.html"style="font-size:110%;">team</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="https://parkmealpha.weebly.com/contact.html"style="font-size:110%;">contact</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="parkinglink.html"style="font-size:110%;">stores</a>
+		</div>
+		<br><br>
+		<div id="social">
+		<a href="https://www.instagram.com/?hl=en"><img class="socialimg" src="images/instagram.png" style="margin-left: 43%;"border="0"></a>
+		<a href="https://www.facebook.com/"><img class="socialimg" src="images/facebook.png"border="0" style="border-radius:12px"></a>
+		<a href="https://twitter.com/?lang=en"><img class="socialimg" src="images/twitter.png"border="0"></a>
+		<a href="https://www.weebly.com/"><img class="socialimg" src="images/weebly.svg"border="0"></a>
+		</div>
+	</body>
 </html>
