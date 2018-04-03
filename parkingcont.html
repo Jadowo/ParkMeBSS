@@ -1,37 +1,20 @@
 <!Doctype html>
 <html>
 	<head>
-		<title> Park Me </title>
+		<title> ParkMe </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>
+		<link rel="stylesheet" href="style.css">
 		<style>
 			body{background-image: url("images/background.jpg");background-repeat: no-repeat;background-size: cover;background-color:black;}
 			a:link{color:white;}
 			a:visited{color:white;}
-			a:hover{color:orange;text-decoration: underline;font-weight: bold;}
+			a:hover{color:yellow;}
 			.linkstyle{font-family:Roboto,sans-serif;font-weight:100;text-decoration:none;}
 			#linkbackground{background-color:black;text-align: left;margin-left:-10px;margin-right:-8px;margin-top:-10px;padding-left:135px;padding-top:30px;padding-top:30px;padding-bottom:30px;}
-			.socialimg{width:42px;height:42px;float:left;margin-right:2%;}
-			#social{margin-top:40.8%;}
-			h1{
-				color:#eaf2ff;
-			}
-			h4{
-				color:#eaf2ff;
-				margin-top:3%;
-				margin-right:1%;
-				float:left;
-			}
-			#h1style{
-				margin-left:10%;
-				margin-top:2%;
-			}
-			.profilepic{
-				width:300px;
-				height:275px;
-				margin-top:3%;
-				margin-right:33%;
-			}
+			img{width:42px;height:42px;float:left;margin-right:2%;}
+			#social{margin-top:1.42%;}
+			<!--change social margin top depending on content-->
 		</style>
 	</head>
 	<body>
@@ -42,29 +25,55 @@
 		<a class="linkstyle" href="parkinglink.html"style="font-size:110%;">stores</a>
 		</div>
 		<br><br>
-		<div id="h1style">
-		<h1>Meat The Team!</h1>
-		<div style="float:left">
-		<img class="profilepic" src="images/profile.png">
-		<br>
-		<h4>Benson Huang:<br><br>Lead programmer for the project.</h4>
-		</div>
-		<div style="float:left">
-		<img class="profilepic" src="images/profile.png">
-		<br>
-		<h4>Steven Kalontar:<br><br>Lead engineer for the project.</h4>
-		</div>
-		<div style="float:left">
-		<img class="profilepic" src="images/profile.png">
-		<br>
-		<h4>Suprim Adhikari:<br><br>Designer of the project.</h4>
-		</div>
-		</div>
+		<div class="container">
+    <h1 class="brand"><span>Park</span>Me</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>ParkMe</h3>
+        <ul>
+          <li>Bayside HighSchool</li><br>
+          <li>(555) 555-5555</li><br>
+          <li>parkmebss@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company" id="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
 		<div id="social">
 		<a href="https://www.instagram.com/?hl=en"><img class="socialimg" src="images/instagram.png" style="margin-left: 43%;"border="0"></a>
 		<a href="https://www.facebook.com/"><img class="socialimg" src="images/facebook.png"border="0" style="border-radius:12px"></a>
 		<a href="https://twitter.com/?lang=en"><img class="socialimg" src="images/twitter.png"border="0"></a>
 		<a href="https://www.weebly.com/"><img class="socialimg" src="images/weebly.svg"border="0"></a>
 		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
