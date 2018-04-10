@@ -9,7 +9,7 @@ body{
 a:link{color:white;}
 a:visited{color:white;}
 a:hover{color:orange;text-decoration: underline;font-weight: bold;}
-.socialimg{width:42px;height:42px;float:left;margin-right:3.25%;}
+.socialimg{width:42px;height:42px;float:left;margin-right:5%;}
 .container{
   max-width:1170px;
   margin-left:auto;
