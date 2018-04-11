@@ -95,23 +95,4 @@ a:hover{color:orange;text-decoration: underline;font-weight: bold;}
   margin-bottom:10px;
   display:none;
 }
-.socialimg{
-	visibility:hidden:
-}
-
-@media(min-width:700px){
-  .wrapper{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .wrapper > *{
-    padding:2em;
-  }
-
-  .company-info h3, .company-info ul, .brand{
-    text-align: left;
-  }
-}
-
 .socialimg{width:42px;height:42px;float:left;margin-right:5%;visibility:visible;}
