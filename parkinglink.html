@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html onmouseover="setInterval(refresh(), 100)">
 	<head>
 		<title> Park Me </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,12 +25,12 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body onclick="setInterval(refresh(), 100)" onmouseover="setInterval(refresh(), 100)">
 		<div id="linkbackground">
 		<a class="linkstyle" href="parkinghome.html"style="font-size:110%;">home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a class="linkstyle" href="parkingteam.html"style="font-size:110%;">team</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a class="linkstyle" href="parkingcont.html"style="font-size:110%;">contact</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a class="linkstyle" href="parkinglink.html"style="font-size:110%;">stores</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="parkinglink.html"style="font-size:110%;">3spotlot</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a class="linkstyle" href="mparkinglink.html"style="font-size:110%;">mobile version</a>
 		</div>
 		<br><br>
@@ -38,16 +38,16 @@
 		<div id="h1style">
 		<h1 id="title">3 Spot Lot</h1>
 		</div>
-		<button type="button" onclick="refresh()" id="refbut">Refresh</button>
+		<button type="button" onclick="setInterval(refresh(), 100)" id="refbut">Refresh</button>
 		<div id="box2">
 			<div class="box">1 <div class="dot" id="cdot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<div class="box">2 <div class="dot" id="cdot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<div class="box">3 <div class="dot" id="cdot3"></div></div> 
 		</div>
 		<div id="social">
-		<a href="https://www.instagram.com/?hl=en"><img class="socialimg" src="images/instagram.png" border="0"></a>
-		<a href="https://www.facebook.com/"><img class="socialimg" src="images/facebook.png"border="0" style="border-radius:12px"></a>
-		<a href="https://twitter.com/?lang=en"><img class="socialimg" src="images/twitter.png"border="0"></a>
+		<a href="https://www.instagram.com/park.me.bss/?hl=en"><img class="socialimg" src="images/instagram.png" border="0"></a>
+		<a href="https://www.facebook.com/Park-Mebss-2125355474364423/"><img class="socialimg" src="images/facebook.png"border="0" style="border-radius:12px"></a>
+		<a href="https://twitter.com/ParkMe_BSS"><img class="socialimg" src="images/twitter.png"border="0"></a>
 		<a href="https://www.weebly.com/"><img class="socialimg" src="images/weebly.svg"border="0"></a>
 		</div>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -69,36 +69,9 @@
 		var dbRef2 = firebase.database().ref().child('modelparking').child('p2');
 		var dbRef3 = firebase.database().ref().child('modelparking').child('p3');
 	
-		function refresh(){
-			dbRef1.on('value', snap => cdot1.innerHTML = snap.val());
-			dbRef2.on('value', snap => cdot2.innerHTML = snap.val());
-			dbRef3.on('value', snap => cdot3.innerHTML = snap.val());
-			
-			if (cdot1.innerHTML == "1"){
-				document.getElementById('cdot1').style.backgroundColor = 'green';
-				document.getElementById('cdot1').style.color = "green";
-			}
-			else if(cdot1.innerHTML == "2"){
-				document.getElementById('cdot1').style.backgroundColor = "red";
-				document.getElementById('cdot1').style.color = "red";
-			}
-			if (cdot2.innerHTML == "1"){
-				document.getElementById('cdot2').style.backgroundColor = 'green';
-				document.getElementById('cdot2').style.color = "green";
-			}
-			else if(cdot2.innerHTML == "2"){
-				document.getElementById('cdot2').style.backgroundColor = "red";
-				document.getElementById('cdot2').style.color = "red";
-			}
-			if (cdot3.innerHTML == "1"){
-				document.getElementById('cdot3').style.backgroundColor = 'green';
-				document.getElementById('cdot3').style.color = "green";
-			}
-			else if(cdot3.innerHTML == "2"){
-				document.getElementById('cdot3').style.backgroundColor = "red";
-				document.getElementById('cdot3').style.color = "red";
-			}
-		}
+		dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
+		dbRef2.on('value', snap => cdot2.style.backgroundColor = snap.val());
+		dbRef3.on('value', snap => cdot3.style.backgroundColor = snap.val());
 </script>
 	</body>
 </html>
