@@ -54,9 +54,9 @@
 		var cdot2=document.getElementById('cdot2');
 		var cdot3=document.getElementById('cdot3');
 	
-		var dbRef1 = firebase.database().ref().child('modelparking').child("p1");
-		var dbRef2 = firebase.database().ref().child('modelparking').child('p2');
-		var dbRef3 = firebase.database().ref().child('modelparking').child('p3');
+		var dbRef1 = firebase.database().ref().child('modelparking').child("parkingspot1").child("p1");
+		var dbRef2 = firebase.database().ref().child('modelparking').child("parkingspot2").child('p2');
+		var dbRef3 = firebase.database().ref().child('modelparking').child("parkingspot3").child('p3');
 	
 		dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
 		dbRef2.on('value', snap => cdot2.style.backgroundColor = snap.val());
