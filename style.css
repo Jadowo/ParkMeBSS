@@ -6,6 +6,7 @@ body{
   background-size:cover;
   background-color:black;}
 }
+a{color:white}
 a:link{color:white;}
 a:visited{color:white;}
 a:hover{color:orange;text-decoration: underline;font-weight: bold;}
