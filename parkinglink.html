@@ -39,9 +39,9 @@
 		<h1 id="title">3 Spot Lot</h1>
 		</div>
 		<div id="box2">
-			<div class="box">1 <div class="dot" id="cdot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="box">2 <div class="dot" id="cdot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="box">3 <div class="dot" id="cdot3"></div></div> 
+			<div class="box">1 <div class="dot" id="parkingspot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">2 <div class="dot" id="parkingspot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">3 <div class="dot" id="parkingspot3"></div></div> 
 		</div>
 		<div id="social">
 		<a href="https://www.instagram.com/park.me.bss/?hl=en"><img class="socialimg" src="images/instagram.png" border="0"></a>
@@ -72,7 +72,8 @@
 		dbRef.on('value', function(snapshot){
 			data = snapshot.val();
 			for(var key in data){
-				console.log(data[key])	
+				document.getElementById(key).style.backgroundColor = data[key].status;
+				console.log(data[key]);	
 			}
 		})
 	
