@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+	<head>
+		<title> Park Me </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="mstyle.css">
+		<style>
+			.linkstyle{font-family:Roboto,sans-serif;font-weight:100;text-decoration: none;}
+			#linkbackground{background-color:black;text-align: left;margin-left:-5px;margin-right:-4px;margin-top:-8px;padding-left:30px;padding-top:30px;padding-bottom:30px;}
+			.box{background: radial-gradient(farthest-side at 50% 100%,white -50%,rgba(96,96,96));color:black;border-radius: 5px;padding: 20px;font-size: 150%;text-align:center;float:left;width:45px;height:75px;margin-right:2%;}
+			#box2{margin-left:13%; width:100%;margin-top:15%;}
+			.dot{height:30px;width:30px;border-radius: 50%;justify-content:center;position:relative;top:15%;left:21%;}
+			#social{position:absolute;bottom:5%;left:25%;right:10%;}
+			h2{
+				color:#eaf2ff;
+				margin-top:10%;
+				margin-bottom:10%;
+			}
+			#h1style{
+				margin-left:33%;
+				margin-top:2%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="linkbackground">
+		<a class="linkstyle" href="mparkinghome.html"style="font-size:110%;">home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="mparkingteam.html"style="font-size:110%;">team</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="mparkingcont.html"style="font-size:110%;">contact</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="mparkinglink.html"style="font-size:110%;">3spotlot</a>
+		</div>
+		<br><br>
+		<h1 class="brand"><span>Park</span>Me</h1>
+		<div id="h1style">
+		<h2>3 Spot Lot</h2>
+		</div>
+		<div id="box2">
+			<div class="box">1 <div class="dot" id="cdot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">2 <div class="dot" id="cdot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box">3 <div class="dot" id="cdot3"></div></div> 
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+		var config = {
+			apiKey: "AIzaSyCMGyvShthPe3RRS1BDaEQCcCrvXZ2r4TM",
+			authDomain: "parkme-bf0e7.firebaseapp.com",
+			databaseURL: "https://parkme-bf0e7.firebaseio.com",
+			projectId: "parkme-bf0e7",
+			storageBucket: "parkme-bf0e7.appspot.com",
+			messagingSenderId: "668607317840"
+		};
+		firebase.initializeApp(config);
+		var cdot1=document.getElementById('cdot1');
+		var cdot2=document.getElementById('cdot2');
+		var cdot3=document.getElementById('cdot3');
+	
+		var dbRef1 = firebase.database().ref().child('modelparking').child("parkingspot1").child("p1");
+		var dbRef2 = firebase.database().ref().child('modelparking').child("parkingspot2").child('p2');
+		var dbRef3 = firebase.database().ref().child('modelparking').child("parkingspot3").child('p3');
+	
+		dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
+		dbRef2.on('value', snap => cdot2.style.backgroundColor = snap.val());
+		dbRef3.on('value', snap => cdot3.style.backgroundColor = snap.val());
+</script>
+	</body>
+</html>
