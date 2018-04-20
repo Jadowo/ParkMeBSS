@@ -47,6 +47,11 @@ a:hover{
 .brand{
   text-align: center;
 }
+#brand{
+	font-size:40px;
+	margin-top:3%;
+	text-align:center;
+}
 .brand span{
   color:#fff;
 }
