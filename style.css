@@ -1,12 +1,13 @@
 body{
   color:#485e74;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://www.hdwallback.net/wp-content/uploads/2017/03/Road-4K-Wallpaper-3396x2123.jpg");
   background-repeat:no-repeat;
   background-size:cover;
-  background-color:#51FF4F;}
+  background-color:#87CEEB;
 }
 a{
-	color:white
+	color:white;
 }
 a:link{
 	color:white;
@@ -15,8 +16,9 @@ a:visited{
 	color:white;
 }
 a:hover{
-	color:orange;
+	color:pink;
 	text-decoration: underline;
+	font-weight:bold;
 }
 .socialimg{
 	width:30px;
@@ -29,7 +31,6 @@ a:hover{
 	text-decoration:none;
 }
 #linkbackground{
-	background-color:black;
 	text-align: left;
 	margin-left:-10px;
 	margin-right:-8px;
@@ -51,6 +52,7 @@ a:hover{
 	font-size:40px;
 	margin-top:3%;
 	text-align:center;
+	text-shadow: 2px 2px 5px grey;
 }
 .brand span{
   color:#fff;
