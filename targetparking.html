@@ -315,9 +315,9 @@
 		dbRef.on('value', function(snapshot){
 			for(var lane=1;lane<7;lane++){
 				data = snapshot.child("lane"+lane).val();
-				for(var o = 0; o<33;o++){
+				for(var i = 0; i<32;i++){
 					for(var key in data){
-						document.getElementsByClassName("lane"+lane)[o].getElementsByClassName(key0).style.backgroundColor = data[key].status;				
+						document.getElementsByClassName("box")[i].style.backgroundColor = data[key].status;				
 						console.log(data[key]);	
 					}
 				}
