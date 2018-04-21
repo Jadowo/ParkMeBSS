@@ -220,14 +220,11 @@
 		var dbRef = firebase.database().ref().child('targetparking');
 		
 		dbRef.on('value', function(snapshot){
-			for(var i=1;i<7;i++){
-			data = snapshot.child("lane"+i).val();
+			data = snapshot.val();
 			for(var key in data){
 				document.getElementById(key).style.backgroundColor = data[key].status;
 				console.log(data[key]);	
 			}
-			}
-			
 		})
 	
 		/*dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
