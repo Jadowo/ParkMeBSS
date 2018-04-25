@@ -1,116 +1,297 @@
-<div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+<!Doctype html>
+<html>
+	<head>
+		<title> Park Me </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			body{
+				background-image: url("images/background2.jpg");
+				background-color:grey;
+				background-size:cover;
+			}
+			.box{
+				background-color:grey;
+				border-radius: 5px;
+				padding: 5px;
+				font-size: 150%;
+				width:8px;
+				height:5px;
+				color:grey;
+				margin-top:1px;
+				margin-right:1px;
+				}
+			#lane1{
+				margin-left:31.70%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane2{
+				margin-top:2%;
+				float:left;
+	
+			}
+			#lane3{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane4{
+				margin-top:2%;
+				float:left;
+			}
+			#lane5{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane6{
+				margin-top:2%;
+				float:left;
+			}
+			#lane7{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane8{
+				margin-top:2%;
+				float:left;
+			}
+			#lane9{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane10{
+				margin-top:2%;
+				float:left;
+			}
+			#lane11{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane12{
+				margin-top:2%;
+				float:left;
+			}
+			#lane13{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane14{
+				margin-top:2%;
+				float:left;
+			}
+			#lane15{
+				margin-left:1%;
+				margin-top:2%;
+				float:left;
+			}
+			#lane16{
+				margin-top:2%;
+				float:left;
+			}
+			.dot{height:50px;width:50px;border-radius: 50%;justify-content: center;position:relative;top:30%;left:35%;}
+			#title{
+				color:red;
+				margin-top:3%;
+				text-align:center;
+			}
+			#mapborder{
+				background-color:grey;
+				width:50px;
+				height:50px;
+				float:left;
+			}
+			#parkingdiv{
+				margin-left:9.5%;
+			}
+			#gmap{
+				margin-left:10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="linkbackground">
+		<a class="linkstyle" href="index.html"style="font-size:110%;">home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="parkingteam.html"style="font-size:110%;">team</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="parkingcont.html"style="font-size:110%;">contact</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="linkstyle" href="stores.html"style="font-size:110%;">stores</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.instagram.com/park.me.bss/?hl=en"><img class="socialimg" src="images/instagram.png" border="0" style="margin-left:58%"></a>
+		<a href="https://www.facebook.com/Park-Mebss-2125355474364423/"><img class="socialimg" src="images/facebook.png"border="0" style="border-radius:12px"></a>
+		<a href="https://twitter.com/ParkMe_BSS"><img class="socialimg" src="images/twitter.png"border="0"></a>
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<br>
+		<div id="mapborder">
+		<iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24177.736738089796!2d-73.85322816849315!3d40.75724970684314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28ab1cdbe85f7%3A0x8295053afb362464!2sTarget!5e0!3m2!1sen!2sus!4v1524337173866" width="400" height="400" frameborder="0" style="border:0" style="margin-left:10px;" allowfullscreen></iframe>
+		<img src="images/targetparking.png" border="0" style="margin-left:10px;margin-top:10px;float:left;" width="400px;"height="400px;">
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<br>
+		
+		<h1 id="brand"class="brand"><span>Park</span>Me</h1>
+		<div id="h1style">
+		<h1 id="title">Target</h1>
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<div id="parkingdiv">
+		<div id="lane1">
+			<div class="box" id="l1p001"><p></p> </div>
+			<div class="box" id="l1p002"><p></p> </div>
+			<div class="box" id="l1p003"><p></p> </div> 
+			<div class="box" id="l1p004"><p></p> </div>
+			<div class="box" id="l1p005"><p></p> </div>
+			<div class="box" id="l1p006"><p></p> </div>
+			<div class="box" id="l1p007"><p></p> </div> 
+			<div class="box" id="l1p008"><p></p> </div>
+			<div class="box" id="l1p009"><p></p> </div>
+			<div class="box" id="l1p010"><p></p> </div>
+			<div class="box" id="l1p011"><p></p> </div>
+			<div class="box" id="l1p012"><p></p> </div> 
+			<div class="box" id="l1p013"><p></p> </div>
+			<div class="box" id="l1p014"><p></p> </div>
+			<div class="box" id="l1p015"><p></p> </div>
+			<div class="box" id="l1p016"><p></p> </div> 
+			<div class="box" id="l1p017"><p></p> </div>
+			<div class="box" id="l1p018"><p></p> </div>
+			<div class="box" id="l1p019"><p></p> </div>
+			<div class="box" id="l1p020"><p></p> </div> 
+			<div class="box" id="l1p021"><p></p> </div>
+			<div class="box" id="l1p022"><p></p> </div>
+			<div class="box" id="l1p023"><p></p> </div>
+			<div class="box" id="l1p024"><p></p> </div> 
+			<div class="box" id="l1p025"><p></p> </div>
+			<div class="box" id="l1p026"><p></p> </div>
+			<div class="box" id="l1p027"><p></p> </div>
+			<div class="box" id="l1p028"><p></p> </div> 
+			<div class="box" id="l1p029"><p></p> </div>
+			<div class="box" id="l1p030"><p></p> </div>
+			<div class="box" id="l1p031"><p></p> </div>
+			<div class="box" id="l1p032"><p></p> </div> 
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<div id="lane2">
+			<div class="box" id="l2p001"><p></p> </div>
+			<div class="box" id="l2p002"><p></p> </div>
+			<div class="box" id="l2p003"><p></p> </div> 
+			<div class="box" id="l2p004"><p></p> </div>
+			<div class="box" id="l2p005"><p></p> </div>
+			<div class="box" id="l2p006"><p></p> </div>
+			<div class="box" id="l2p007"><p></p> </div> 
+			<div class="box" id="l2p008"><p></p> </div>
+			<div class="box" id="l2p009"><p></p> </div>
+			<div class="box" id="l2p010"><p></p> </div>
+			<div class="box" id="l2p011"><p></p> </div>
+			<div class="box" id="l2p012"><p></p> </div> 
+			<div class="box" id="l2p013"><p></p> </div>
+			<div class="box" id="l2p014"><p></p> </div>
+			<div class="box" id="l2p015"><p></p> </div>
+			<div class="box" id="l2p016"><p></p> </div> 
+			<div class="box" id="l2p017"><p></p> </div>
+			<div class="box" id="l2p018"><p></p> </div>
+			<div class="box" id="l2p019"><p></p> </div>
+			<div class="box" id="l2p020"><p></p> </div> 
+			<div class="box" id="l2p021"><p></p> </div>
+			<div class="box" id="l2p022"><p></p> </div>
+			<div class="box" id="l2p023"><p></p> </div>
+			<div class="box" id="l2p024"><p></p> </div> 
+			<div class="box" id="l2p025"><p></p> </div>
+			<div class="box" id="l2p026"><p></p> </div>
+			<div class="box" id="l2p027"><p></p> </div>
+			<div class="box" id="l2p028"><p></p> </div> 
+			<div class="box" id="l2p029"><p></p> </div>
+			<div class="box" id="l2p030"><p></p> </div>
+			<div class="box" id="l2p031"><p></p> </div>
+			<div class="box" id="l2p032"><p></p> </div> 
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<div id="lane3">
+			<div class="box" id="l3p001"><p></p> </div>
+			<div class="box" id="l3p002"><p></p> </div>
+			<div class="box" id="l3p003"><p></p> </div> 
+			<div class="box" id="l3p004"><p></p> </div>
+			<div class="box" id="l3p005"><p></p> </div>
+			<div class="box" id="l3p006"><p></p> </div>
+			<div class="box" id="l3p007"><p></p> </div> 
+			<div class="box" id="l3p008"><p></p> </div>
+			<div class="box" id="l3p009"><p></p> </div>
+			<div class="box" id="l3p010"><p></p> </div>
+			<div class="box" id="l3p011"><p></p> </div>
+			<div class="box" id="l3p012"><p></p> </div> 
+			<div class="box" id="l3p013"><p></p> </div>
+			<div class="box" id="l3p014"><p></p> </div>
+			<div class="box" id="l3p015"><p></p> </div>
+			<div class="box" id="l3p016"><p></p> </div> 
+			<div class="box" id="l3p017"><p></p> </div>
+			<div class="box" id="l3p018"><p></p> </div>
+			<div class="box" id="l3p019"><p></p> </div>
+			<div class="box" id="l3p020"><p></p> </div> 
+			<div class="box" id="l3p021"><p></p> </div>
+			<div class="box" id="l3p022"><p></p> </div>
+			<div class="box" id="l3p023"><p></p> </div>
+			<div class="box" id="l3p024"><p></p> </div> 
+			<div class="box" id="l3p025"><p></p> </div>
+			<div class="box" id="l3p026"><p></p> </div>
+			<div class="box" id="l3p027"><p></p> </div>
+			<div class="box" id="l3p028"><p></p> </div> 
+			<div class="box" id="l3p029"><p></p> </div>
+			<div class="box" id="l3p030"><p></p> </div>
+			<div class="box" id="l3p031"><p></p> </div>
+			<div class="box" id="l3p032"><p></p> </div> 
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
-			<div class="box" id="l5p019"><p></p> </div>
-			<div class="box" id="l5p020"><p></p> </div> 
-			<div class="box" id="l5p021"><p></p> </div>
-			<div class="box" id="l5p022"><p></p> </div>
-			<div class="box" id="l5p023"><p></p> </div>
-			<div class="box" id="l5p024"><p></p> </div> 
-			<div class="box" id="l5p025"><p></p> </div>
-			<div class="box" id="l5p026"><p></p> </div>
-			<div class="box" id="l5p027"><p></p> </div>
-			<div class="box" id="l5p028"><p></p> </div> 
-			<div class="box" id="l5p029"><p></p> </div>
-			<div class="box" id="l5p030"><p></p> </div>
-			<div class="box" id="l5p031"><p></p> </div>
-			<div class="box" id="l5p032"><p></p> </div> 
+		<div id="lane4">
+			<div class="box" id="l4p001"><p></p> </div>
+			<div class="box" id="l4p002"><p></p> </div>
+			<div class="box" id="l4p003"><p></p> </div> 
+			<div class="box" id="l4p004"><p></p> </div>
+			<div class="box" id="l4p005"><p></p> </div>
+			<div class="box" id="l4p006"><p></p> </div>
+			<div class="box" id="l4p007"><p></p> </div> 
+			<div class="box" id="l4p008"><p></p> </div>
+			<div class="box" id="l4p009"><p></p> </div>
+			<div class="box" id="l4p010"><p></p> </div>
+			<div class="box" id="l4p011"><p></p> </div>
+			<div class="box" id="l4p012"><p></p> </div> 
+			<div class="box" id="l4p013"><p></p> </div>
+			<div class="box" id="l4p014"><p></p> </div>
+			<div class="box" id="l4p015"><p></p> </div>
+			<div class="box" id="l4p016"><p></p> </div> 
+			<div class="box" id="l4p017"><p></p> </div>
+			<div class="box" id="l4p018"><p></p> </div>
+			<div class="box" id="l4p019"><p></p> </div>
+			<div class="box" id="l4p020"><p></p> </div> 
+			<div class="box" id="l4p021"><p></p> </div>
+			<div class="box" id="l4p022"><p></p> </div>
+			<div class="box" id="l4p023"><p></p> </div>
+			<div class="box" id="l4p024"><p></p> </div> 
+			<div class="box" id="l4p025"><p></p> </div>
+			<div class="box" id="l4p026"><p></p> </div>
+			<div class="box" id="l4p027"><p></p> </div>
+			<div class="box" id="l4p028"><p></p> </div> 
+			<div class="box" id="l4p029"><p></p> </div>
+			<div class="box" id="l4p030"><p></p> </div>
+			<div class="box" id="l4p031"><p></p> </div>
+			<div class="box" id="l4p032"><p></p> </div> 
 		</div>
-		<div id="lane6"><div class="box" id="l5p018"><p></p> </div>
+		<div id="lane5">
+			<div class="box" id="l5p001"><p></p> </div>
+			<div class="box" id="l5p002"><p></p> </div>
+			<div class="box" id="l5p003"><p></p> </div> 
+			<div class="box" id="l5p004"><p></p> </div>
+			<div class="box" id="l5p005"><p></p> </div>
+			<div class="box" id="l5p006"><p></p> </div>
+			<div class="box" id="l5p007"><p></p> </div> 
+			<div class="box" id="l5p008"><p></p> </div>
+			<div class="box" id="l5p009"><p></p> </div>
+			<div class="box" id="l5p010"><p></p> </div>
+			<div class="box" id="l5p011"><p></p> </div>
+			<div class="box" id="l5p012"><p></p> </div> 
+			<div class="box" id="l5p013"><p></p> </div>
+			<div class="box" id="l5p014"><p></p> </div>
+			<div class="box" id="l5p015"><p></p> </div>
+			<div class="box" id="l5p016"><p></p> </div> 
+			<div class="box" id="l5p017"><p></p> </div>
+			<div class="box" id="l5p018"><p></p> </div>
 			<div class="box" id="l5p019"><p></p> </div>
 			<div class="box" id="l5p020"><p></p> </div> 
 			<div class="box" id="l5p021"><p></p> </div>
@@ -127,3 +308,413 @@
 			<div class="box" id="l5p032"><p></p> </div> 
 		</div>
 		<div id="lane6">
+			<div class="box" id="l6p001"><p></p> </div>
+			<div class="box" id="l6p002"><p></p> </div>
+			<div class="box" id="l6p003"><p></p> </div> 
+			<div class="box" id="l6p004"><p></p> </div>
+			<div class="box" id="l6p005"><p></p> </div>
+			<div class="box" id="l6p006"><p></p> </div>
+			<div class="box" id="l6p007"><p></p> </div>
+			<div class="box" id="l6p008"><p></p> </div> 
+			<div class="box" id="l6p009"><p></p> </div>
+			<div class="box" id="l6p010"><p></p> </div>
+			<div class="box" id="l6p011"><p></p> </div>
+			<div class="box" id="l6p012"><p></p> </div>
+			<div class="box" id="l6p013"><p></p> </div> 
+			<div class="box" id="l6p014"><p></p> </div>
+			<div class="box" id="l6p015"><p></p> </div>
+			<div class="box" id="l6p016"><p></p> </div>
+			<div class="box" id="l6p017"><p></p> </div> 
+			<div class="box" id="l6p018"><p></p> </div>
+			<div class="box" id="l6p019"><p></p> </div>
+			<div class="box" id="l6p020"><p></p> </div>
+			<div class="box" id="l6p021"><p></p> </div> 
+			<div class="box" id="l6p022"><p></p> </div>
+			<div class="box" id="l6p023"><p></p> </div>
+			<div class="box" id="l6p024"><p></p> </div>
+			<div class="box" id="l6p025"><p></p> </div> 
+			<div class="box" id="l6p026"><p></p> </div>
+			<div class="box" id="l6p027"><p></p> </div>
+			<div class="box" id="l6p028"><p></p> </div>
+			<div class="box" id="l6p029"><p></p> </div> 
+			<div class="box" id="l6p030"><p></p> </div>
+			<div class="box" id="l6p031"><p></p> </div>
+			<div class="box" id="l6p032"><p></p> </div>
+		</div>		
+		<div id="lane7">
+			<div class="box" id="l7p001"><p></p> </div>
+			<div class="box" id="l7p002"><p></p> </div>
+			<div class="box" id="l7p003"><p></p> </div> 
+			<div class="box" id="l7p004"><p></p> </div>
+			<div class="box" id="l7p005"><p></p> </div>
+			<div class="box" id="l7p006"><p></p> </div>
+			<div class="box" id="l7p007"><p></p> </div> 
+			<div class="box" id="l7p008"><p></p> </div>
+			<div class="box" id="l7p009"><p></p> </div>
+			<div class="box" id="l7p010"><p></p> </div>
+			<div class="box" id="l7p011"><p></p> </div>
+			<div class="box" id="l7p012"><p></p> </div> 
+			<div class="box" id="l7p013"><p></p> </div>
+			<div class="box" id="l7p014"><p></p> </div>
+			<div class="box" id="l7p015"><p></p> </div>
+			<div class="box" id="l7p016"><p></p> </div> 
+			<div class="box" id="l7p017"><p></p> </div>
+			<div class="box" id="l7p018"><p></p> </div>
+			<div class="box" id="l7p019"><p></p> </div>
+			<div class="box" id="l7p020"><p></p> </div> 
+			<div class="box" id="l7p021"><p></p> </div>
+			<div class="box" id="l7p022"><p></p> </div>
+			<div class="box" id="l7p023"><p></p> </div>
+			<div class="box" id="l7p024"><p></p> </div> 
+			<div class="box" id="l7p025"><p></p> </div>
+			<div class="box" id="l7p026"><p></p> </div>
+			<div class="box" id="l7p027"><p></p> </div>
+			<div class="box" id="l7p028"><p></p> </div> 
+			<div class="box" id="l7p029"><p></p> </div>
+			<div class="box" id="l7p030"><p></p> </div>
+			<div class="box" id="l7p031"><p></p> </div>
+			<div class="box" id="l7p032"><p></p> </div> 
+		</div>
+		<div id="lane8">
+			<div class="box" id="l8p001"><p></p> </div>
+			<div class="box" id="l8p002"><p></p> </div>
+			<div class="box" id="l8p003"><p></p> </div> 
+			<div class="box" id="l8p004"><p></p> </div>
+			<div class="box" id="l8p005"><p></p> </div>
+			<div class="box" id="l8p006"><p></p> </div>
+			<div class="box" id="l8p007"><p></p> </div> 
+			<div class="box" id="l8p008"><p></p> </div>
+			<div class="box" id="l8p009"><p></p> </div>
+			<div class="box" id="l8p010"><p></p> </div>
+			<div class="box" id="l8p011"><p></p> </div>
+			<div class="box" id="l8p012"><p></p> </div> 
+			<div class="box" id="l8p013"><p></p> </div>
+			<div class="box" id="l8p014"><p></p> </div>
+			<div class="box" id="l8p015"><p></p> </div>
+			<div class="box" id="l8p016"><p></p> </div> 
+			<div class="box" id="l8p017"><p></p> </div>
+			<div class="box" id="l8p018"><p></p> </div>
+			<div class="box" id="l8p019"><p></p> </div>
+			<div class="box" id="l8p020"><p></p> </div> 
+			<div class="box" id="l8p021"><p></p> </div>
+			<div class="box" id="l8p022"><p></p> </div>
+			<div class="box" id="l8p023"><p></p> </div>
+			<div class="box" id="l8p024"><p></p> </div> 
+			<div class="box" id="l8p025"><p></p> </div>
+			<div class="box" id="l8p026"><p></p> </div>
+			<div class="box" id="l8p027"><p></p> </div>
+			<div class="box" id="l8p028"><p></p> </div> 
+			<div class="box" id="l8p029"><p></p> </div>
+			<div class="box" id="l8p030"><p></p> </div>
+			<div class="box" id="l8p031"><p></p> </div>
+			<div class="box" id="l8p032"><p></p> </div> 
+		</div>
+		<div id="lane9">
+			<div class="box" id="l9p001"><p></p> </div>
+			<div class="box" id="l9p002"><p></p> </div>
+			<div class="box" id="l9p003"><p></p> </div> 
+			<div class="box" id="l9p004"><p></p> </div>
+			<div class="box" id="l9p005"><p></p> </div>
+			<div class="box" id="l9p006"><p></p> </div>
+			<div class="box" id="l9p007"><p></p> </div> 
+			<div class="box" id="l9p008"><p></p> </div>
+			<div class="box" id="l9p009"><p></p> </div>
+			<div class="box" id="l9p010"><p></p> </div>
+			<div class="box" id="l9p011"><p></p> </div>
+			<div class="box" id="l9p012"><p></p> </div> 
+			<div class="box" id="l9p013"><p></p> </div>
+			<div class="box" id="l9p014"><p></p> </div>
+			<div class="box" id="l9p015"><p></p> </div>
+			<div class="box" id="l9p016"><p></p> </div> 
+			<div class="box" id="l9p017"><p></p> </div>
+			<div class="box" id="l9p018"><p></p> </div>
+			<div class="box" id="l9p019"><p></p> </div>
+			<div class="box" id="l9p020"><p></p> </div> 
+			<div class="box" id="l9p021"><p></p> </div>
+			<div class="box" id="l9p022"><p></p> </div>
+			<div class="box" id="l9p023"><p></p> </div>
+			<div class="box" id="l9p024"><p></p> </div> 
+			<div class="box" id="l9p025"><p></p> </div>
+			<div class="box" id="l9p026"><p></p> </div>
+			<div class="box" id="l9p027"><p></p> </div>
+			<div class="box" id="l9p028"><p></p> </div> 
+			<div class="box" id="l9p029"><p></p> </div>
+			<div class="box" id="l9p030"><p></p> </div>
+			<div class="box" id="l9p031"><p></p> </div>
+			<div class="box" id="l9p032"><p></p> </div> 
+		</div>
+		<div id="lane10">
+			<div class="box" id="l10p001"><p></p> </div>
+			<div class="box" id="l10p002"><p></p> </div>
+			<div class="box" id="l10p003"><p></p> </div> 
+			<div class="box" id="l10p004"><p></p> </div>
+			<div class="box" id="l10p005"><p></p> </div>
+			<div class="box" id="l10p006"><p></p> </div>
+			<div class="box" id="l10p007"><p></p> </div> 
+			<div class="box" id="l10p008"><p></p> </div>
+			<div class="box" id="l10p009"><p></p> </div>
+			<div class="box" id="l10p010"><p></p> </div>
+			<div class="box" id="l10p011"><p></p> </div>
+			<div class="box" id="l10p012"><p></p> </div> 
+			<div class="box" id="l10p013"><p></p> </div>
+			<div class="box" id="l10p014"><p></p> </div>
+			<div class="box" id="l10p015"><p></p> </div>
+			<div class="box" id="l10p016"><p></p> </div> 
+			<div class="box" id="l10p017"><p></p> </div>
+			<div class="box" id="l10p018"><p></p> </div>
+			<div class="box" id="l10p019"><p></p> </div>
+			<div class="box" id="l10p020"><p></p> </div> 
+			<div class="box" id="l10p021"><p></p> </div>
+			<div class="box" id="l10p022"><p></p> </div>
+			<div class="box" id="l10p023"><p></p> </div>
+			<div class="box" id="l10p024"><p></p> </div> 
+			<div class="box" id="l10p025"><p></p> </div>
+			<div class="box" id="l10p026"><p></p> </div>
+			<div class="box" id="l10p027"><p></p> </div>
+			<div class="box" id="l10p028"><p></p> </div> 
+			<div class="box" id="l10p029"><p></p> </div>
+			<div class="box" id="l10p030"><p></p> </div>
+			<div class="box" id="l10p031"><p></p> </div>
+			<div class="box" id="l10p032"><p></p> </div> 
+		</div>
+		<div id="lane11">
+			<div class="box" id="l11p001"><p></p> </div>
+			<div class="box" id="l11p002"><p></p> </div>
+			<div class="box" id="l11p003"><p></p> </div> 
+			<div class="box" id="l11p004"><p></p> </div>
+			<div class="box" id="l11p005"><p></p> </div>
+			<div class="box" id="l11p006"><p></p> </div>
+			<div class="box" id="l11p007"><p></p> </div> 
+			<div class="box" id="l11p008"><p></p> </div>
+			<div class="box" id="l11p009"><p></p> </div>
+			<div class="box" id="l11p010"><p></p> </div>
+			<div class="box" id="l11p011"><p></p> </div> 
+			<div class="box" id="l11p012"><p></p> </div>
+			<div class="box" id="l11p013"><p></p> </div>
+			<div class="box" id="l11p014"><p></p> </div>
+			<div class="box" id="l11p015"><p></p> </div> 
+			<div class="box" id="l11p016"><p></p> </div>
+			<div class="box" id="l11p017"><p></p> </div>
+			<div class="box" id="l11p018"><p></p> </div>
+			<div class="box" id="l11p019"><p></p> </div> 
+			<div class="box" id="l11p020"><p></p> </div>
+			<div class="box" id="l11p021"><p></p> </div>
+			<div class="box" id="l11p022"><p></p> </div> 
+			<div class="box" id="l11p023"><p></p> </div>
+			<div class="box" id="l11p024"><p></p> </div>
+			<div class="box" id="l11p025"><p></p> </div>
+			<div class="box" id="l11p026"><p></p> </div> 
+			<div class="box" id="l11p027"><p></p> </div>
+			<div class="box" id="l11p028"><p></p> </div>
+			<div class="box" id="l11p029"><p></p> </div>
+			<div class="box" id="l11p030"><p></p> </div> 
+			<div class="box" id="l11p031"><p></p> </div>
+			<div class="box" id="l11p032"><p></p> </div>
+		</div>		
+		<div id="lane12">
+			<div class="box" id="l12p001"><p></p> </div>
+			<div class="box" id="l12p002"><p></p> </div> 
+			<div class="box" id="l12p003"><p></p> </div>
+			<div class="box" id="l12p004"><p></p> </div>
+			<div class="box" id="l12p005"><p></p> </div>
+			<div class="box" id="l12p006"><p></p> </div> 
+			<div class="box" id="l12p007"><p></p> </div>
+			<div class="box" id="l12p008"><p></p> </div>
+			<div class="box" id="l12p009"><p></p> </div>
+			<div class="box" id="l12p010"><p></p> </div> 
+			<div class="box" id="l12p011"><p></p> </div>
+			<div class="box" id="l12p012"><p></p> </div> 
+			<div class="box" id="l12p013"><p></p> </div>
+			<div class="box" id="l12p014"><p></p> </div>
+			<div class="box" id="l12p015"><p></p> </div>
+			<div class="box" id="l12p016"><p></p> </div> 
+			<div class="box" id="l12p017"><p></p> </div>
+			<div class="box" id="l12p018"><p></p> </div>
+			<div class="box" id="l12p019"><p></p> </div>
+			<div class="box" id="l12p020"><p></p> </div> 
+			<div class="box" id="l12p021"><p></p> </div>
+			<div class="box" id="l12p022"><p></p> </div>
+			<div class="box" id="l12p023"><p></p> </div>
+			<div class="box" id="l12p024"><p></p> </div> 
+			<div class="box" id="l12p025"><p></p> </div>
+			<div class="box" id="l12p026"><p></p> </div>
+			<div class="box" id="l12p027"><p></p> </div>
+			<div class="box" id="l12p028"><p></p> </div> 
+			<div class="box" id="l12p029"><p></p> </div>
+			<div class="box" id="l12p030"><p></p> </div>
+			<div class="box" id="l12p031"><p></p> </div>
+			<div class="box" id="l12p032"><p></p> </div> 
+		</div>
+		<div id="lane13">
+			<div class="box" id="l13p001"><p></p> </div>
+			<div class="box" id="l13p002"><p></p> </div>
+			<div class="box" id="l13p003"><p></p> </div> 
+			<div class="box" id="l13p004"><p></p> </div>
+			<div class="box" id="l13p005"><p></p> </div>
+			<div class="box" id="l13p006"><p></p> </div>
+			<div class="box" id="l13p007"><p></p> </div> 
+			<div class="box" id="l13p008"><p></p> </div>
+			<div class="box" id="l13p009"><p></p> </div>
+			<div class="box" id="l13p010"><p></p> </div>
+			<div class="box" id="l13p011"><p></p> </div>
+			<div class="box" id="l13p012"><p></p> </div> 
+			<div class="box" id="l13p013"><p></p> </div>
+			<div class="box" id="l13p014"><p></p> </div>
+			<div class="box" id="l13p015"><p></p> </div>
+			<div class="box" id="l13p016"><p></p> </div> 
+			<div class="box" id="l13p017"><p></p> </div>
+			<div class="box" id="l13p018"><p></p> </div>
+			<div class="box" id="l13p019"><p></p> </div>
+			<div class="box" id="l13p020"><p></p> </div> 
+			<div class="box" id="l13p021"><p></p> </div>
+			<div class="box" id="l13p022"><p></p> </div>
+			<div class="box" id="l13p023"><p></p> </div>
+			<div class="box" id="l13p024"><p></p> </div> 
+			<div class="box" id="l13p025"><p></p> </div>
+			<div class="box" id="l13p026"><p></p> </div>
+			<div class="box" id="l13p027"><p></p> </div>
+			<div class="box" id="l13p028"><p></p> </div> 
+			<div class="box" id="l13p029"><p></p> </div>
+			<div class="box" id="l13p030"><p></p> </div>
+			<div class="box" id="l13p031"><p></p> </div>
+			<div class="box" id="l13p032"><p></p> </div> 
+		</div>
+		<div id="lane14">
+			<div class="box" id="l14p001"><p></p> </div>
+			<div class="box" id="l14p002"><p></p> </div>
+			<div class="box" id="l14p003"><p></p> </div> 
+			<div class="box" id="l14p004"><p></p> </div>
+			<div class="box" id="l14p005"><p></p> </div>
+			<div class="box" id="l14p006"><p></p> </div>
+			<div class="box" id="l14p007"><p></p> </div> 
+			<div class="box" id="l14p008"><p></p> </div>
+			<div class="box" id="l14p009"><p></p> </div>
+			<div class="box" id="l14p010"><p></p> </div>
+			<div class="box" id="l14p011"><p></p> </div>
+			<div class="box" id="l14p012"><p></p> </div> 
+			<div class="box" id="l14p013"><p></p> </div>
+			<div class="box" id="l14p014"><p></p> </div>
+			<div class="box" id="l14p015"><p></p> </div>
+			<div class="box" id="l14p016"><p></p> </div> 
+			<div class="box" id="l14p017"><p></p> </div>
+			<div class="box" id="l14p018"><p></p> </div> 
+			<div class="box" id="l14p019"><p></p> </div>
+			<div class="box" id="l14p020"><p></p> </div>
+			<div class="box" id="l14p021"><p></p> </div> 
+			<div class="box" id="l14p022"><p></p> </div>
+			<div class="box" id="l14p023"><p></p> </div>
+			<div class="box" id="l14p024"><p></p> </div>
+			<div class="box" id="l14p025"><p></p> </div> 
+			<div class="box" id="l14p026"><p></p> </div>
+			<div class="box" id="l14p027"><p></p> </div>
+			<div class="box" id="l14p028"><p></p> </div>
+			<div class="box" id="l14p029"><p></p> </div> 
+			<div class="box" id="l14p030"><p></p> </div>
+			<div class="box" id="l14p031"><p></p> </div>
+			<div class="box" id="l14p032"><p></p> </div>
+		</div>		
+		<div id="lane15">
+			<div class="box" id="l15p001"><p></p> </div>
+			<div class="box" id="l15p002"><p></p> </div>
+			<div class="box" id="l15p003"><p></p> </div> 
+			<div class="box" id="l15p004"><p></p> </div>
+			<div class="box" id="l15p005"><p></p> </div>
+			<div class="box" id="l15p006"><p></p> </div>
+			<div class="box" id="l15p007"><p></p> </div> 
+			<div class="box" id="l15p008"><p></p> </div>
+			<div class="box" id="l15p009"><p></p> </div>
+			<div class="box" id="l15p010"><p></p> </div>
+			<div class="box" id="l15p011"><p></p> </div>
+			<div class="box" id="l15p012"><p></p> </div> 
+			<div class="box" id="l15p013"><p></p> </div>
+			<div class="box" id="l15p014"><p></p> </div>
+			<div class="box" id="l15p015"><p></p> </div>
+			<div class="box" id="l15p016"><p></p> </div> 
+			<div class="box" id="l15p017"><p></p> </div>
+			<div class="box" id="l15p018"><p></p> </div>
+			<div class="box" id="l15p019"><p></p> </div>
+			<div class="box" id="l15p020"><p></p> </div> 
+			<div class="box" id="l15p021"><p></p> </div>
+			<div class="box" id="l15p022"><p></p> </div>
+			<div class="box" id="l15p023"><p></p> </div>
+			<div class="box" id="l15p024"><p></p> </div> 
+			<div class="box" id="l15p025"><p></p> </div>
+			<div class="box" id="l15p026"><p></p> </div>
+			<div class="box" id="l15p027"><p></p> </div>
+			<div class="box" id="l15p028"><p></p> </div> 
+			<div class="box" id="l15p029"><p></p> </div>
+			<div class="box" id="l15p030"><p></p> </div>
+			<div class="box" id="l15p031"><p></p> </div>
+			<div class="box" id="l15p032"><p></p> </div> 
+		</div>
+		<div id="lane16">
+			<div class="box" id="l16p001"><p></p> </div>
+			<div class="box" id="l16p002"><p></p> </div>
+			<div class="box" id="l16p003"><p></p> </div> 
+			<div class="box" id="l16p004"><p></p> </div>
+			<div class="box" id="l16p005"><p></p> </div>
+			<div class="box" id="l16p006"><p></p> </div>
+			<div class="box" id="l16p007"><p></p> </div> 
+			<div class="box" id="l16p008"><p></p> </div>
+			<div class="box" id="l16p009"><p></p> </div>
+			<div class="box" id="l16p010"><p></p> </div>
+			<div class="box" id="l16p011"><p></p> </div>
+			<div class="box" id="l16p012"><p></p> </div> 
+			<div class="box" id="l16p013"><p></p> </div>
+			<div class="box" id="l16p014"><p></p> </div>
+			<div class="box" id="l16p015"><p></p> </div>
+			<div class="box" id="l16p016"><p></p> </div> 
+			<div class="box" id="l16p017"><p></p> </div>
+			<div class="box" id="l16p018"><p></p> </div>
+			<div class="box" id="l16p019"><p></p> </div>
+			<div class="box" id="l16p020"><p></p> </div> 
+			<div class="box" id="l16p021"><p></p> </div>
+			<div class="box" id="l16p022"><p></p> </div>
+			<div class="box" id="l16p023"><p></p> </div>
+			<div class="box" id="l16p024"><p></p> </div> 
+			<div class="box" id="l16p025"><p></p> </div>
+			<div class="box" id="l16p026"><p></p> </div>
+			<div class="box" id="l16p027"><p></p> </div>
+			<div class="box" id="l16p028"><p></p> </div> 
+			<div class="box" id="l16p029"><p></p> </div>
+			<div class="box" id="l16p030"><p></p> </div>
+			<div class="box" id="l16p031"><p></p> </div>
+			<div class="box" id="l16p032"><p></p> </div> 
+		</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+		var config = {
+			apiKey: "AIzaSyCMGyvShthPe3RRS1BDaEQCcCrvXZ2r4TM",
+			authDomain: "parkme-bf0e7.firebaseapp.com",
+			databaseURL: "https://parkme-bf0e7.firebaseio.com",
+			projectId: "parkme-bf0e7",
+			storageBucket: "parkme-bf0e7.appspot.com",
+			messagingSenderId: "668607317840"
+		};
+		firebase.initializeApp(config);
+		/*var cdot1=document.getElementById('cdot1');
+		var cdot2=document.getElementById('cdot2');
+		var cdot3=document.getElementById('cdot3');
+	
+		var dbRef1 = firebase.database().ref().child('modelparking').child("parkingspot1").child("p1");
+		var dbRef2 = firebase.database().ref().child('modelparking').child("parkingspot2").child('p2');
+		var dbRef3 = firebase.database().ref().child('modelparking').child("parkingspot3").child('p3');*/
+		var dbRef = firebase.database().ref().child('targetparking');
+		
+		dbRef.on('value', function(snapshot){
+			for(var lane =1; lane <17; lane++){
+			data = snapshot.child("lane"+lane).val();
+			for(var key in data){
+				document.getElementById(key).style.backgroundColor = data[key].status;
+				console.log(data[key]);	
+			}
+			}
+		})
+	
+		/*dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
+		dbRef2.on('value', snap => cdot2.style.backgroundColor = snap.val());
+		dbRef3.on('value', snap => cdot3.style.backgroundColor = snap.val());*/
+</script>
+	</body>
+</html>
