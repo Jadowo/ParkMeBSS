@@ -9,28 +9,37 @@
 				background-image: url("images/background2.jpg");
 			}
 			.box{
-				background-color:grey;
+				background-color:white;
 				border-radius: 5px;
 				padding: 20px;
-				font-size: 150%;
+				font-size: 500%;
 				text-align:center;
 				float:left;
 				width:150px;
 				height:200px;
 				margin-right:5%;
+				color:white;
 				}
 			#box2{
 				text-align:center;
 				margin-left:31.70%;
 				margin-top:7%;
 			}
-			.dot{height:50px;width:50px;border-radius: 50%;justify-content: center;position:relative;top:30%;left:35%;}
 			#title{
 				text-align:center;
 				color:#eaf2ff;
 			}
 			#h1style{
 				text-align:center;
+			}
+			#mapborder{
+				background-color:grey;
+				width:50px;
+				height:50px;
+				float:left;
+			}
+			#gmap{
+				margin-left:10px;
 			}
 		</style>
 	<body>
@@ -44,15 +53,18 @@
 		<a href="https://twitter.com/ParkMe_BSS"><img class="socialimg" src="images/twitter.png"border="0"></a>
 		</div>
 		<br><br>
+		<div id="mapborder">0
+		<iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.5810699886233!2d-73.8185145416661!3d40.73645764483229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2605db418b9cd%3A0xac786f794a018877!2sQueens+College!5e0!3m2!1sen!2sus!4v1524710248776" width="400" height="400" frameborder="0" style="border:0" style="margin-left:10px;" allowfullscreen></iframe></div>
+		</div>
 		<h1 id="brand"class="brand"><span>Park</span>Me</h1>
 		<br><br>
 		<div id="h1style">
 		<h1 id="title">3 Spot Lot</h1>
 		</div>
 		<div id="box2">
-			<div class="box">1 <div class="dot" id="parkingspot1"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="box">2 <div class="dot" id="parkingspot2"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="box">3 <div class="dot" id="parkingspot3"></div></div> 
+			<div class="box" id="parkingspot1">1</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box" id="parkingspot2">2</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="box" id="parkingspot3">3</div></div> 
 		</div>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 	<script>
@@ -65,13 +77,7 @@
 			messagingSenderId: "668607317840"
 		};
 		firebase.initializeApp(config);
-		var cdot1=document.getElementById('cdot1');
-		var cdot2=document.getElementById('cdot2');
-		var cdot3=document.getElementById('cdot3');
 	
-		/*var dbRef1 = firebase.database().ref().child('modelparking').child("parkingspot1").child("p1");
-		var dbRef2 = firebase.database().ref().child('modelparking').child("parkingspot2").child('p2');
-		var dbRef3 = firebase.database().ref().child('modelparking').child("parkingspot3").child('p3');*/
 		var dbRef = firebase.database().ref().child('modelparking');
 		
 		dbRef.on('value', function(snapshot){
@@ -82,9 +88,6 @@
 			}
 		})
 	
-		/*dbRef1.on('value', snap => cdot1.style.backgroundColor = snap.val());
-		dbRef2.on('value', snap => cdot2.style.backgroundColor = snap.val());
-		dbRef3.on('value', snap => cdot3.style.backgroundColor = snap.val());*/
 </script>
 	</body>
 </html>
